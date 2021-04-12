@@ -1,0 +1,14 @@
+-
+   name: Play1
+   hosts: localhost
+   tasks:
+      - name: Create a text file
+        copy:
+         dest: '{{ path }}'
+         content: |
+            This is a sample text file
+
+      - name: Copy file from one location to another location
+        copy:
+         src: '{{ path }}'
+         dest: '{{ destination }}'
